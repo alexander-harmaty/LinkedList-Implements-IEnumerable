@@ -55,14 +55,12 @@
 //            return newNode;
 //        }
 
-//        public Person(string first = "none", string last = "none") 
+//        public Person(string f = "none", string l = "none")
 //        {
-//            FirstName = fist;
-//            LastName = last;
+//            FirstName = f;
+//            LastName = l;
 //        }
 
 //        public override string ToString() => $"{FirstName} {LastName}";
 //    }
-
-
 //}
