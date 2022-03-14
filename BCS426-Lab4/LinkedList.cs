@@ -38,22 +38,21 @@ namespace Wrox.ProCSharp.Generics
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        //public LinkedListNode<T> AddFirst(T node)
-        //{
-        //    var newNode = new LinkedListNode<T>(node);
-        //    if(isEmpty())
-        //    {
-        //        Last = newNode;
-        //    }
-        //    else
-        //    {
-        //        First.Prev = newNode;
-        //    }
-        //    newNode.Next = First;
-        //    First = newNode;
-        //    length++;
-
-        //    return newNode;
-        //}
+        public LinkedListNode<T> AddFirst(T node)
+        {
+            var newNode = new LinkedListNode<T>(node);
+            if (Last == null)
+            {
+                Last = newNode;
+                First = Last;
+            }
+            else
+            {
+                First.Prev = newNode;
+                newNode.Next = First;
+                First = newNode;
+            }
+            return newNode;
+        }
     }
 }
