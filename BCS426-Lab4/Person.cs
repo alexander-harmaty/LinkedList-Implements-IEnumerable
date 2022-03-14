@@ -3,31 +3,31 @@
 
 //namespace Wrox.ProCSharp.Generics
 //{
-//    public class Person<T> : IEnumerable<T>
+//    public class Person : IEnumerable<string>
 //    {
-//        public string FirstName { get; set; }
-//        public string LastName { get; set; }
+//        public LinkedListNode<string> FirstName { get; set; }
+//        public LinkedListNode<string> LastName { get; set; }
 
-//        public LinkedListNode<T> AddLast(T node)
+//        public LinkedListNode<string> AddLast(string node)
 //        {
-//            var newNode = new LinkedListNode<T>(node);
-//            if (First == null)
+//            var newNode = new LinkedListNode<string>(node);
+//            if (FirstName == null)
 //            {
-//                First = newNode;
-//                Last = First;
+//                FirstName = newNode;
+//                LastName = FirstName;
 //            }
 //            else
 //            {
-//                newNode.Prev = Last;
-//                Last.Next = newNode;
-//                Last = newNode;
+//                newNode.Prev = LastName;
+//                LastName.Next = newNode;
+//                LastName = newNode;
 //            }
 //            return newNode;
 //        }
 
-//        public IEnumerator<T> GetEnumerator()
+//        public IEnumerator<string> GetEnumerator()
 //        {
-//            LinkedListNode<T> current = First;
+//            LinkedListNode<string> current = FirstName;
 
 //            while (current != null)
 //            {
@@ -38,27 +38,27 @@
 
 //        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-//        public LinkedListNode<T> AddFirst(T node)
+//        public LinkedListNode<string> AddFirst(string node)
 //        {
-//            var newNode = new LinkedListNode<T>(node);
-//            if (Last == null)
+//            var newNode = new LinkedListNode<string>(node);
+//            if (LastName == null)
 //            {
-//                Last = newNode;
-//                First = Last;
+//                LastName = newNode;
+//                FirstName = LastName;
 //            }
 //            else
 //            {
-//                First.Prev = newNode;
-//                newNode.Next = First;
-//                First = newNode;
+//                FirstName.Prev = newNode;
+//                newNode.Next = FirstName;
+//                FirstName = newNode;
 //            }
 //            return newNode;
 //        }
 
-//        public Person(string f = "none", string l = "none")
+//        public Person(string first = "none", string last = "none") 
 //        {
-//            FirstName = f;
-//            LastName = l;
+//            FirstName = fist;
+//            LastName = last;
 //        }
 
 //        public override string ToString() => $"{FirstName} {LastName}";

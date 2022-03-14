@@ -42,15 +42,19 @@ namespace Wrox.ProCSharp.Generics
 
 
 
-            //var list1 = new LinkedList<Person>();
-            //list1.AddLast("Alex" ,"Harmaty");
-            //list1.AddLast("four");
-            //list1.AddLast("foo");
+            var list1 = new LinkedList<Person>();
+            list1.AddLast(new Person("Alex", "Harmaty"));
+            list1.AddLast(new Person("Chris", "Ericson"));
+            list1.AddLast(new Person("Tom", "Smith"));
 
-            //foreach (string s in list1)
-            //{
-            //    Console.WriteLine(s);
-            //}
+            list1.AddFirst(new Person("Joe", "Shmoe"));
+            list1.AddFirst(new Person("Timmy", "Daniels"));
+            list1.AddFirst(new Person("Eric", "Tomson"));
+
+            foreach (Person p in list1)
+            {
+                Console.WriteLine(p);
+            }
 
             Console.WriteLine("Press any key to end program");
             var end = Console.ReadLine();
