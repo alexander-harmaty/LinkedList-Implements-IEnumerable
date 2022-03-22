@@ -9,6 +9,7 @@ namespace Wrox.ProCSharp.Generics
             Console.WriteLine("Welcome to Lab 4!\n");
 
             var list2 = new LinkedList<int>();
+
             list2.AddLast(1);
             list2.AddLast(3);
             list2.AddLast(5);
@@ -26,6 +27,7 @@ namespace Wrox.ProCSharp.Generics
 
 
             var list3 = new LinkedList<string>();
+
             list3.AddLast("2");
             list3.AddLast("four");
             list3.AddLast("foo");
@@ -42,20 +44,21 @@ namespace Wrox.ProCSharp.Generics
 
 
 
-            //var list1 = new LinkedList<Person>();
-            //list1.AddLast(new Person("Alex", "Harmaty"));
-            //list1.AddLast(new Person("Chris", "Ericson"));
-            //list1.AddLast(new Person("Tom", "Smith"));
+            var list1 = new LinkedList<Person>();
 
-            //list1.AddFirst(new Person("Joe", "Shmoe"));
-            //list1.AddFirst(new Person("Timmy", "Daniels"));
-            //list1.AddFirst(new Person("Eric", "Tomson"));
+            list1.AddLast(new Person("Alex", "Harmaty"));
+            list1.AddLast(new Person("Chris", "Ericson"));
+            list1.AddLast(new Person("Tom", "Smith"));
 
-            //Console.WriteLine("\nAn additional list has been created and filled with PERSONs using AddFirst & Add Last methods!");
-            //foreach (Person p in list1)
-            //{
-            //    Console.WriteLine(p);
-            //}
+            list1.AddFirst(new Person("Joe", "Shmoe"));
+            list1.AddFirst(new Person("Timmy", "Daniels"));
+            list1.AddFirst(new Person("Eric", "Tomson"));
+
+            Console.WriteLine("\nAn additional list has been created and filled with PERSONs using AddFirst & Add Last methods!");
+            foreach (Person p in list1)
+            {
+                Console.WriteLine(p);
+            }
 
             Console.WriteLine("Press any key to end program");
             var end = Console.ReadLine();
