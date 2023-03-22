@@ -24,6 +24,6 @@ Each list is filled with nodes using the AddFirst and AddLast methods, and the c
 
 ## How It Works
 
-The `LinkedList<T>` class implements the `IEnumerable<T>` interface, which allows us to use a foreach loop to iterate through the list. 
 The `LinkedList<T>` class includes methods for adding nodes to both the beginning and the end of the list, as well as properties for accessing the first and last nodes.
 The program creates new instances of the class and calls the `AddFirst` or `AddLast` methods to add nodes to the respective lists. 
+The foreach loop in the Main method calls the `GetEnumerator` method of the `LinkedList<T>` class, which returns an `IEnumerator<T>` object, allowing the loop to iterate through the linked list and return each element one by one using the `MoveNext` method until the end of the list is reached.
